@@ -1,0 +1,123 @@
+/* ===== БОКОВАЯ ПАНЕЛЬ ===== */
+.sidebar {
+    background: var(--bg-primary);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    border: 1px solid var(--border-color);
+    position: sticky;
+    top: 2rem;
+    max-width: 800px; /* Увеличил с 300px */
+    margin: 0 auto;
+    width: 100%;
+}
+
+.sidebar-section {
+    margin-bottom: var(--spacing-xl);
+}
+
+.sidebar-section:last-child {
+    margin-bottom: 0;
+}
+
+.sidebar-section h3 {
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+/* Формы быстрого добавления */
+.quick-add-forms {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.quick-form {
+    display: flex;
+    gap: var(--spacing-sm);
+    align-items: flex-end;
+}
+
+.quick-form input {
+    flex: 1;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    min-height: 38px;
+}
+
+.quick-form input::placeholder {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.quick-form input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.quick-form .btn {
+    min-height: 38px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: var(--spacing-sm) var(--spacing-md);
+}
+
+/* Статистика */
+.stats-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md);
+    background: var(--bg-secondary);
+    border-radius: var(--border-radius-sm);
+    border: 1px solid var(--border-light);
+}
+
+.stat-label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.stat-number {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+    .sidebar {
+        position: static;
+        max-width: 600px; /* Увеличил для планшетов */
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        max-width: 100%;
+        padding: var(--spacing-md);
+    }
+    
+    .quick-form {
+        flex-direction: column;
+    }
+    
+    .quick-form input,
+    .quick-form .btn {
+        min-height: auto;
+        width: 100%;
+    }
+}

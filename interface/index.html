@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minecraft Mods Manager</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="app-container">
+      <!-- Хедер (только логотип) -->
+      <header class="header">
+        <div class="header-content">
+          <h1 class="logo">🎮 Minecraft Mods Manager</h1>
+          <div class="user-info" style="display: none" id="user-info">
+            <div class="user-avatar">U</div>
+            <span class="user-name" id="username-display">UserOleg</span>
+          </div>
+          <button class="logout-btn" id="logout-btn" style="display: none">
+            🚪 Выйти
+          </button>
+        </div>
+      </header>
+
+      <!-- Центральное окно авторизации -->
+      <div class="auth-center-container" id="auth-section">
+        <div class="auth-center-card">
+          <div class="auth-form">
+            <h3 id="login-title">Вход в систему</h3>
+
+            <div class="form-group">
+              <label for="username">Имя пользователя</label>
+              <input
+                type="text"
+                id="username"
+                placeholder="Введите имя пользователя"
+                value="UserOleg"
+              />
+              <div class="field-error"></div>
+            </div>
+
+            <div class="form-group" id="email-field" style="display: none">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="Введите ваш email" />
+              <div class="field-error"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="password">Пароль</label>
+              <input
+                type="password"
+                id="password"
+                placeholder="Введите пароль"
+                value="AboBa13666-"
+              />
+              <div class="field-error"></div>
+
+              <!-- Подсказки для пароля -->
+              <div
+                class="password-hints"
+                id="password-hints"
+                style="display: none"
+              >
+                <div class="password-hint-item invalid" id="hint-length">
+                  <span class="hint-icon">⭕</span>
+                  Минимум 6 символов
+                </div>
+                <div class="password-hint-item invalid" id="hint-lowercase">
+                  <span class="hint-icon">⭕</span>
+                  Строчные буквы (a-z)
+                </div>
+                <div class="password-hint-item invalid" id="hint-uppercase">
+                  <span class="hint-icon">⭕</span>
+                  Заглавные буквы (A-Z)
+                </div>
+                <div class="password-hint-item invalid" id="hint-numbers">
+                  <span class="hint-icon">⭕</span>
+                  Цифры (0-9)
+                </div>
+                <div class="password-hint-item invalid" id="hint-special">
+                  <span class="hint-icon">⭕</span>
+                  Спецсимволы (!@#$%)
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="form-group"
+              id="confirm-password-field"
+              style="display: none"
+            >
+              <label for="confirm-password">Подтверждение пароля</label>
+              <input
+                type="password"
+                id="confirm-password"
+                placeholder="Повторите пароль"
+              />
+              <div class="field-error"></div>
+              <div class="password-hint">
+                🔒 Пароль должен содержать: заглавные и строчные буквы, цифры,
+                спецсимволы
+              </div>
+            </div>
+
+            <div class="auth-buttons">
+              <button id="login-btn" class="btn btn-primary btn-large">
+                Войти
+              </button>
+              <button
+                id="register-btn"
+                class="btn btn-success btn-large"
+                style="display: none"
+              >
+                Зарегистрироваться
+              </button>
+            </div>
+
+            <div class="auth-links">
+              <a href="#" id="switch-to-register"
+                >📝 Нет аккаунта? Зарегистрироваться</a
+              >
+              <a href="#" id="switch-to-login" style="display: none"
+                >🔐 Уже есть аккаунт? Войти</a
+              >
+            </div>
+
+            <div id="auth-message"></div>
+          </div>
+
+          <div class="auth-footer">
+            <p>Minecraft Mods Manager © 2025 ОЛЕГр</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Основной контент (скрыт до авторизации) -->
+      <main class="main-content" id="content-section" style="display: none">
+        <!-- Навигация между таблицами -->
+        <nav class="tabs-nav">
+          <button class="tab-btn active" data-tab="mods">📦 Моды</button>
+          <button class="tab-btn" data-tab="collections">📚 Сборки</button>
+        </nav>
+
+        <!-- Поиск и фильтры -->
+   
+
+        <!-- Контейнер для контента -->
+        <div class="tabs-content">
+          <!-- СЕТКА И ТАБЛИЦА МОДОВ -->
+          <div class="tab-pane active" id="mods-tab">
+            <div class="table-header">
+              <h2>Список модов</h2>
+              <div style="display: flex; gap: 0.5rem; align-items: center">
+                <div class="view-toggle">
+                  <button class="view-btn active" data-view="grid">
+                    🔲 Сетка
+                  </button>
+                  <button class="view-btn" data-view="table">📋 Таблица</button>
+                </div>
+                <button class="btn btn-primary" id="refresh-mods">
+                  🔄 Обновить
+                </button>
+                <button class="btn btn-success" id="add-mod-btn">
+                  + Добавить мод
+                </button>
+              </div>
+            </div>
+
+            <!-- Grid сетка модов (показывается по умолчанию) -->
+            <div class="mods-grid" id="mods-grid">
+              <div class="mods-grid-container" id="mods-grid-container">
+                <!-- Моды будут здесь -->
+                <div class="mods-loading">
+                  <div class="loading-spinner">📦</div>
+                  <p>Загрузка модов...</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Таблица модов (скрыта по умолчанию) -->
+            <div
+              class="table-container"
+              id="mods-table-container"
+              style="display: none"
+            >
+              <table class="data-table" id="mods-table">
+                <thead>
+                  <tr>
+                    <th>Название</th>
+                    <th>Описание</th>
+                    <th>Версии</th>
+                    <th>Модлоадеры</th>
+                    <th>Теги</th>
+                    <th>Размер</th>
+                    <th>Загрузки</th>
+                    <th>Тип</th>
+                    <th>Действия</th>
+                  </tr>
+                </thead>
+                <tbody id="mods-tbody">
+                  <!-- Моды будут здесь -->
+                  <tr>
+                    <td
+                      colspan="9"
+                      style="text-align: center; padding: 2rem; color: #888"
+                    >
+                      📦 Загрузка модов...
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Таблица сборок -->
+          <div class="tab-pane" id="collections-tab">
+            <div class="table-header">
+              <h2>Сборки модификаций</h2>
+              <button class="btn btn-success" id="add-collection-btn">
+                + Добавить сборку
+              </button>
+            </div>
+            <div class="table-container">
+              <table class="data-table" id="collections-table">
+                <thead>
+                  <tr>
+                    <th>Название</th>
+                    <th>Время прохождения</th>
+                    <th>Версия</th>
+                    <th>Модлоадер</th>
+                    <th>Сложность</th>
+                    <th>Фокусы</th>
+                    <th>Кол-во модов</th>
+                    <th>Обновлено</th>
+                    <th>Действия</th>
+                  </tr>
+                </thead>
+                <tbody id="collections-tbody">
+                  <!-- Сборки будут здесь -->
+                  <tr>
+                    <td
+                      colspan="9"
+                      style="text-align: center; padding: 2rem; color: #888"
+                    >
+                      📚 Загрузка сборок...
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Боковая панель для быстрого добавления -->
+        <!-- Боковая панель для быстрого добавления -->
+<aside class="sidebar">
+    <div class="sidebar-section">
+        <h3>⚡ Быстрое добавление</h3>
+        <div class="quick-add-forms">
+            <div class="quick-form">
+                <input
+                    type="text"
+                    id="quick-tag"
+                    placeholder="🏷️ Название тега"
+                />
+                <button class="btn btn-sm" data-type="tag">+ Тег</button>
+            </div>
+
+            <div class="quick-form">
+                <input
+                    type="text"
+                    id="quick-version"
+                    placeholder="🔢 Версия (1.XX.X)"
+                />
+                <button class="btn btn-sm" data-type="version">+ Версия</button>
+            </div>
+
+            <div class="quick-form">
+                <input
+                    type="text"
+                    id="quick-developer"
+                    placeholder="👨‍💻 Разработчик"
+                />
+                <button class="btn btn-sm" data-type="developer">+ Разработчик</button>
+            </div>
+
+            <div class="quick-form">
+                <input
+                    type="text"
+                    id="quick-modloader"
+                    placeholder="🛠️ Модлоадер"
+                />
+                <button class="btn btn-sm" data-type="modloader">+ Модлоадер</button>
+            </div>
+
+            <div class="quick-form">
+                <input
+                    type="text"
+                    id="quick-difficulty"
+                    placeholder="🎯 Сложность"
+                />
+                <button class="btn btn-sm" data-type="difficulty">+ Сложность</button>
+            </div>
+
+            <div class="quick-form">
+                <input 
+                    type="text" 
+                    id="quick-focus" 
+                    placeholder="🎯 Фокус" 
+                />
+                <button class="btn btn-sm" data-type="focus">+ Фокус</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Статистика в боковой панели -->
+    <div class="sidebar-section">
+        <h3>📊 Статистика</h3>
+        <div class="stats-sidebar">
+            <div class="stat-item">
+                <span class="stat-label">Моды:</span>
+                <span class="stat-number" id="mods-count">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Сборки:</span>
+                <span class="stat-number" id="collections-count">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Теги:</span>
+                <span class="stat-number" id="tags-count">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Разработчики:</span>
+                <span class="stat-number" id="developers-count">0</span>
+            </div>
+        </div>
+    </div>
+</aside>
+      </main>
+
+      <!-- Модальные окна будут добавляться через JS -->
+      <div id="modal-container"></div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/ui/ui-core.js"></script>
+    <script src="js/ui/ui-init.js"></script>
+    <script src="js/ui/ui-renders.js"></script>
+    <script src="js/ui/ui-modals.js"></script>
+    <script src="js/ui/ui-api.js"></script>
+    <script src="js/ui/ui-utils.js"></script>
+    <script src="js/ui/ui-search.js"></script>
+    <script src="js/auth.js"></script>
+  </body>
+</html>

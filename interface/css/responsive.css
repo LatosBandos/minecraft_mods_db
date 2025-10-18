@@ -1,0 +1,146 @@
+/* ===== АДАПТИВНОСТЬ ===== */
+
+@media (max-width: 1200px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .sidebar {
+        position: static;
+        order: 3;
+    }
+    
+    .mods-grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+    
+    .mod-details-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .mod-details-image {
+        justify-self: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .auth-center-container {
+        padding: var(--spacing-md);
+        min-height: calc(100vh - 60px);
+    }
+    
+    .auth-center-card {
+        padding: var(--spacing-xl) var(--spacing-lg);
+    }
+    
+    .auth-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .table-header {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        align-items: flex-start;
+    }
+    
+    .data-table {
+        font-size: 0.9rem;
+    }
+    
+    .data-table th,
+    .data-table td {
+        padding: var(--spacing-sm);
+    }
+    
+    .mods-grid-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .view-toggle {
+        margin-right: 0;
+        margin-bottom: var(--spacing-md);
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .mod-details-meta {
+        grid-template-columns: 1fr;
+    }
+    
+    .mod-details-actions {
+        flex-direction: column;
+    }
+    
+    .modal-mod-details {
+        max-width: 95%;
+        max-height: 90vh;
+    }
+    
+    .mod-details-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+        padding: 0 var(--spacing-md) var(--spacing-md) var(--spacing-md);
+    }
+    
+    .mod-details-image {
+        width: 150px;
+        height: 150px;
+        font-size: 2.5rem;
+        justify-self: center;
+    }
+    
+    .mod-details-title {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    .mod-details-developer {
+        text-align: center;
+    }
+    
+    .mod-details-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-center-card {
+        padding: var(--spacing-lg) var(--spacing-md);
+    }
+    
+    .auth-header h2 {
+        font-size: 1.3rem;
+    }
+    
+    .auth-form h3 {
+        font-size: 1.1rem;
+    }
+    
+    .header-content {
+        padding: var(--spacing-md);
+    }
+    
+    .mod-card {
+        padding: var(--spacing-md);
+    }
+    
+    .mod-title {
+        font-size: 1.1rem;
+    }
+    
+    .mod-details-content {
+        padding: 0 var(--spacing-sm) var(--spacing-sm) var(--spacing-sm);
+    }
+    
+    .mod-details-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .mod-details-sections {
+        max-height: 250px;
+    }
+    
+    .mod-details-section {
+        padding: var(--spacing-md);
+    }
+}

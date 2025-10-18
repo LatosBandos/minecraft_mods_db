@@ -1,0 +1,160 @@
+/* ===== КАРТОЧКИ МОДОВ ===== */
+
+.mod-card {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    transition: all 0.3s ease;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Карточка с изображением */
+.mod-card.with-image {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), var(--card-image) center/cover;
+    color: white;
+    border: none;
+}
+
+.mod-card.with-image .mod-title,
+.mod-card.with-image .mod-developer,
+.mod-card.with-image .mod-stat-item {
+    color: white;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.mod-card.with-image .mod-tag,
+.mod-card.with-image .mod-loader {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Заголовок карточки */
+.mod-header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.mod-title {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: left;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.3s ease;
+    line-height: 1.3;
+}
+
+.mod-title:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+.mod-developer {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* Контент карточки */
+.mod-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.mod-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.mod-type {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.mod-type-icon {
+    font-size: 1.1rem;
+}
+
+.mod-stats {
+    display: flex;
+    gap: var(--spacing-lg);
+}
+
+.mod-stat-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.mod-stat-icon {
+    opacity: 0.7;
+}
+
+/* Теги и модлоадеры */
+.mod-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.mod-tag {
+    background: rgba(79, 195, 247, 0.1);
+    color: var(--primary-color);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(79, 195, 247, 0.2);
+}
+
+.mod-loaders {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.mod-loader {
+    background: rgba(255, 167, 38, 0.1);
+    color: var(--warning-color);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius);
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 167, 38, 0.2);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .mod-card {
+        min-height: 160px;
+        padding: var(--spacing-md);
+    }
+    
+    .mod-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-sm);
+    }
+    
+    .mod-stats {
+        width: 100%;
+        justify-content: space-between;
+    }
+}

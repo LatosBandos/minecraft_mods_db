@@ -17,14 +17,26 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Cors;
+using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
 
 // Подключение к БД
 string connection = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationContext>(options => options.UseNpgsql(connection));
 
-// Конфигурация JWT (с fallback на appsettings.json)
+// Конфигурация JWT
 var tokenSettings = builder.Configuration.GetSection("TokenSettings");
 var secretKey = Environment.GetEnvironmentVariable("SECRET") 
     ?? tokenSettings["SecretKey"] 
@@ -80,9 +92,7 @@ builder.Services.AddAuthorization();
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
-
 var app = builder.Build();
-
 
 using (var scope = app.Services.CreateScope())
 {
@@ -91,12 +101,11 @@ using (var scope = app.Services.CreateScope())
     {
         var user = new User 
         { 
-            UserName = "UserOleg",  // Используйте UserName вместо Nickname для входа
-            Email = "user@example.com", // Identity требует Email
+            UserName = "UserOleg",
+            Email = "user@example.com",
             Nickname = "UserOleg" 
         };
         var result = await userManager.CreateAsync(user, "AboBa13666-");
-        
         
         if (!result.Succeeded)
         {
@@ -108,9 +117,21 @@ using (var scope = app.Services.CreateScope())
     }
 }
 
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(
+        Path.Combine(builder.Environment.ContentRootPath, "wwwroot", "uploads")),
+    RequestPath = "/uploads"
+});
 
 // Middleware pipeline
-app.UseRouting(); // Важно: должен быть перед UseAuthentication
+app.UseRouting();
+
+app.UseCors(builder => builder
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader());
+
 app.UseAuthentication();
 app.UseAuthorization();
 

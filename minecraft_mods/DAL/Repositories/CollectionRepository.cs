@@ -77,7 +77,7 @@ public class CollectionRepository(ApplicationContext context) : IRepository<Coll
 
     public async Task<QueryParamsDto<CollectionDto>> GetByPage(QueryParamsDto<CollectionDto> queryParams)
     {
-        var totalCount = await context.Mods.CountAsync();
+        var totalCount = await context.Collections.CountAsync();
         string sorting = $"{queryParams.SortBy} {(queryParams.OrderBy?.ToLower() == "desc" ? "descending" : "ascending")}";
 
 

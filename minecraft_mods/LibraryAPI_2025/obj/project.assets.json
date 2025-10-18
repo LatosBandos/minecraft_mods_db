@@ -3490,23 +3490,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dexal\\.nuget\\packages\\": {},
+    "C:\\Users\\kapi\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\All Files\\minecraft_repos\\minecraft_mods_db\\minecraft_mods\\LibraryAPI_2025\\LibraryAPI_2025.csproj",
+      "projectUniqueName": "C:\\Users\\kapi\\Desktop\\учеба\\работы\\javascript\\3 лаба\\minecraft_mods_db\\minecraft_mods\\LibraryAPI_2025\\LibraryAPI_2025.csproj",
       "projectName": "LibraryAPI_2025",
-      "projectPath": "E:\\All Files\\minecraft_repos\\minecraft_mods_db\\minecraft_mods\\LibraryAPI_2025\\LibraryAPI_2025.csproj",
-      "packagesPath": "C:\\Users\\dexal\\.nuget\\packages\\",
-      "outputPath": "E:\\All Files\\minecraft_repos\\minecraft_mods_db\\minecraft_mods\\LibraryAPI_2025\\obj\\",
+      "projectPath": "C:\\Users\\kapi\\Desktop\\учеба\\работы\\javascript\\3 лаба\\minecraft_mods_db\\minecraft_mods\\LibraryAPI_2025\\LibraryAPI_2025.csproj",
+      "packagesPath": "C:\\Users\\kapi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kapi\\Desktop\\учеба\\работы\\javascript\\3 лаба\\minecraft_mods_db\\minecraft_mods\\LibraryAPI_2025\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\dexal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\kapi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3515,18 +3515,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "c:\\program files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "E:\\All Files\\minecraft_repos\\minecraft_mods_db\\minecraft_mods\\BLL\\BLL.csproj": {
-              "projectPath": "E:\\All Files\\minecraft_repos\\minecraft_mods_db\\minecraft_mods\\BLL\\BLL.csproj"
+            "C:\\Users\\kapi\\Desktop\\учеба\\работы\\javascript\\3 лаба\\minecraft_mods_db\\minecraft_mods\\BLL\\BLL.csproj": {
+              "projectPath": "C:\\Users\\kapi\\Desktop\\учеба\\работы\\javascript\\3 лаба\\minecraft_mods_db\\minecraft_mods\\BLL\\BLL.csproj"
             },
-            "E:\\All Files\\minecraft_repos\\minecraft_mods_db\\minecraft_mods\\DAL\\DAL.csproj": {
-              "projectPath": "E:\\All Files\\minecraft_repos\\minecraft_mods_db\\minecraft_mods\\DAL\\DAL.csproj"
+            "C:\\Users\\kapi\\Desktop\\учеба\\работы\\javascript\\3 лаба\\minecraft_mods_db\\minecraft_mods\\DAL\\DAL.csproj": {
+              "projectPath": "C:\\Users\\kapi\\Desktop\\учеба\\работы\\javascript\\3 лаба\\minecraft_mods_db\\minecraft_mods\\DAL\\DAL.csproj"
             }
           }
         }
@@ -3583,7 +3582,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

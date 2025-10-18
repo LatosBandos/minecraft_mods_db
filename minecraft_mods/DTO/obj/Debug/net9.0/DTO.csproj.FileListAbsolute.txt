@@ -92,3 +92,27 @@ C:\Users\kapi\Desktop\sosalNew\minecraft_mods_db\minecraft_mods\DTO\obj\Debug\ne
 C:\Users\kapi\Desktop\sosalNew\minecraft_mods_db\minecraft_mods\DTO\obj\Debug\net9.0\refint\DTO.dll
 C:\Users\kapi\Desktop\sosalNew\minecraft_mods_db\minecraft_mods\DTO\obj\Debug\net9.0\DTO.pdb
 C:\Users\kapi\Desktop\sosalNew\minecraft_mods_db\minecraft_mods\DTO\obj\Debug\net9.0\ref\DTO.dll
+C:\Users\kapi\Desktop\учеба\работы\ооп\актуалочка\minecraft_mods_db\minecraft_mods\DTO\bin\Debug\net9.0\DTO.deps.json
+C:\Users\kapi\Desktop\учеба\работы\ооп\актуалочка\minecraft_mods_db\minecraft_mods\DTO\bin\Debug\net9.0\DTO.dll
+C:\Users\kapi\Desktop\учеба\работы\ооп\актуалочка\minecraft_mods_db\minecraft_mods\DTO\bin\Debug\net9.0\DTO.pdb
+C:\Users\kapi\Desktop\учеба\работы\ооп\актуалочка\minecraft_mods_db\minecraft_mods\DTO\obj\Debug\net9.0\DTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kapi\Desktop\учеба\работы\ооп\актуалочка\minecraft_mods_db\minecraft_mods\DTO\obj\Debug\net9.0\DTO.AssemblyInfoInputs.cache
+C:\Users\kapi\Desktop\учеба\работы\ооп\актуалочка\minecraft_mods_db\minecraft_mods\DTO\obj\Debug\net9.0\DTO.AssemblyInfo.cs
+C:\Users\kapi\Desktop\учеба\работы\ооп\актуалочка\minecraft_mods_db\minecraft_mods\DTO\obj\Debug\net9.0\DTO.csproj.CoreCompileInputs.cache
+C:\Users\kapi\Desktop\учеба\работы\ооп\актуалочка\minecraft_mods_db\minecraft_mods\DTO\obj\Debug\net9.0\DTO.sourcelink.json
+C:\Users\kapi\Desktop\учеба\работы\ооп\актуалочка\minecraft_mods_db\minecraft_mods\DTO\obj\Debug\net9.0\DTO.dll
+C:\Users\kapi\Desktop\учеба\работы\ооп\актуалочка\minecraft_mods_db\minecraft_mods\DTO\obj\Debug\net9.0\refint\DTO.dll
+C:\Users\kapi\Desktop\учеба\работы\ооп\актуалочка\minecraft_mods_db\minecraft_mods\DTO\obj\Debug\net9.0\DTO.pdb
+C:\Users\kapi\Desktop\учеба\работы\ооп\актуалочка\minecraft_mods_db\minecraft_mods\DTO\obj\Debug\net9.0\ref\DTO.dll
+C:\Users\kapi\Desktop\учеба\работы\javascript\3 лаба\minecraft_mods_db\minecraft_mods\DTO\bin\Debug\net9.0\DTO.deps.json
+C:\Users\kapi\Desktop\учеба\работы\javascript\3 лаба\minecraft_mods_db\minecraft_mods\DTO\bin\Debug\net9.0\DTO.dll
+C:\Users\kapi\Desktop\учеба\работы\javascript\3 лаба\minecraft_mods_db\minecraft_mods\DTO\bin\Debug\net9.0\DTO.pdb
+C:\Users\kapi\Desktop\учеба\работы\javascript\3 лаба\minecraft_mods_db\minecraft_mods\DTO\obj\Debug\net9.0\DTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kapi\Desktop\учеба\работы\javascript\3 лаба\minecraft_mods_db\minecraft_mods\DTO\obj\Debug\net9.0\DTO.AssemblyInfoInputs.cache
+C:\Users\kapi\Desktop\учеба\работы\javascript\3 лаба\minecraft_mods_db\minecraft_mods\DTO\obj\Debug\net9.0\DTO.AssemblyInfo.cs
+C:\Users\kapi\Desktop\учеба\работы\javascript\3 лаба\minecraft_mods_db\minecraft_mods\DTO\obj\Debug\net9.0\DTO.csproj.CoreCompileInputs.cache
+C:\Users\kapi\Desktop\учеба\работы\javascript\3 лаба\minecraft_mods_db\minecraft_mods\DTO\obj\Debug\net9.0\DTO.sourcelink.json
+C:\Users\kapi\Desktop\учеба\работы\javascript\3 лаба\minecraft_mods_db\minecraft_mods\DTO\obj\Debug\net9.0\DTO.dll
+C:\Users\kapi\Desktop\учеба\работы\javascript\3 лаба\minecraft_mods_db\minecraft_mods\DTO\obj\Debug\net9.0\refint\DTO.dll
+C:\Users\kapi\Desktop\учеба\работы\javascript\3 лаба\minecraft_mods_db\minecraft_mods\DTO\obj\Debug\net9.0\DTO.pdb
+C:\Users\kapi\Desktop\учеба\работы\javascript\3 лаба\minecraft_mods_db\minecraft_mods\DTO\obj\Debug\net9.0\ref\DTO.dll

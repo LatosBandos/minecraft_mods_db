@@ -23,7 +23,6 @@ public class ModRepository(ApplicationContext context) : IRepository<ModDto, Cre
             .Include(m => m.Developers)
             .ToListAsync();
 
-
         return mods.Select(mod => new ModDto()
         {
             Id = mod.Id,
@@ -32,6 +31,7 @@ public class ModRepository(ApplicationContext context) : IRepository<ModDto, Cre
             IsClientside = mod.IsClientside,
             Downloads = mod.Downloads,
             Size = mod.Size,
+            ImageUrl = mod.ImageUrl, // ← ДОБАВЛЕНО
             Versions = mod.Versions.Select(v => new ModVersionDto()
             {
                 Id = v.Id,
@@ -65,12 +65,10 @@ public class ModRepository(ApplicationContext context) : IRepository<ModDto, Cre
         }).ToList();
     }
 
-
     public async Task<QueryParamsDto<ModDto>> GetByPage(QueryParamsDto<ModDto> queryParams)
     {
         var totalCount = await context.Mods.CountAsync();
         string sorting = $"{queryParams.SortBy} {(queryParams.OrderBy?.ToLower() == "desc" ? "descending" : "ascending")}";
-        
         
         var mods = context.Mods
             .Include(m => m.Versions)
@@ -80,7 +78,6 @@ public class ModRepository(ApplicationContext context) : IRepository<ModDto, Cre
             .Skip((queryParams.PageNumber - 1) * queryParams.PageSize)
             .Take(queryParams.PageSize)
             .AsQueryable();
-        
         
         if (queryParams.Search != string.Empty)
         {
@@ -106,7 +103,6 @@ public class ModRepository(ApplicationContext context) : IRepository<ModDto, Cre
                 .Where(m => m.Tags.Any(t => queryParams.TagIds.Contains(t.Id)));
         }
         
-        
         var items = mods
             .OrderBy(sorting)
             .Select(m => new ModDto()
@@ -117,6 +113,7 @@ public class ModRepository(ApplicationContext context) : IRepository<ModDto, Cre
             IsClientside = m.IsClientside,
             Downloads = m.Downloads,
             Size = m.Size,
+            ImageUrl = m.ImageUrl, // ← ДОБАВЛЕНО
             Versions = m.Versions.Select(v => new ModVersionDto()
             {
                 Id = v.Id,
@@ -149,7 +146,6 @@ public class ModRepository(ApplicationContext context) : IRepository<ModDto, Cre
             UpdatedAt = m.UpdatedAt
         }).ToList();
 
-
         return new QueryParamsDto<ModDto>()
         {
             Items = items,
@@ -158,7 +154,6 @@ public class ModRepository(ApplicationContext context) : IRepository<ModDto, Cre
             PageSize = queryParams.PageSize
         };
     }
-
 
     public async Task<ModDto> GetById(Guid id)
     {
@@ -169,13 +164,11 @@ public class ModRepository(ApplicationContext context) : IRepository<ModDto, Cre
             .Include(m => m.Developers)
             .FirstOrDefaultAsync(m => m.Id == id);
 
-
         if (mod == null)
         {
             throw new KeyNotFoundException($"Mod with id {id} not found");
         }
         
-
         return new ModDto()
         {
             Id = mod.Id,
@@ -184,6 +177,7 @@ public class ModRepository(ApplicationContext context) : IRepository<ModDto, Cre
             IsClientside = mod.IsClientside,
             Downloads = mod.Downloads,
             Size = mod.Size,
+            ImageUrl = mod.ImageUrl, // ← ДОБАВЛЕНО
             Versions = mod.Versions.Select(v => new ModVersionDto()
             {
                 Id = v.Id,
@@ -217,28 +211,23 @@ public class ModRepository(ApplicationContext context) : IRepository<ModDto, Cre
         };
     }
 
-
     public async Task<ModDto> Create(CreateModDto mod)
     {
         var versions = await context.ModVersions
             .Where(v => mod.VersionIds.Contains(v.Id))
             .ToListAsync();
         
-        
         var loaders = await context.ModLoaders
             .Where(l => mod.ModLoaderIds.Contains(l.Id))
             .ToListAsync();
-        
         
         var tags = await context.Tags
             .Where(t => mod.TagIds.Contains(t.Id))
             .ToListAsync();
         
-        
         var developers = await context.Developers
             .Where(d => mod.DeveloperIds.Contains(d.Id))
             .ToListAsync();
-        
         
         Mod createdMod = new()
         {
@@ -251,10 +240,10 @@ public class ModRepository(ApplicationContext context) : IRepository<ModDto, Cre
             IsClientside = mod.IsClientside,
             Downloads = mod.Downloads,
             Size = mod.Size,
+            ImageUrl = mod.ImageUrl, // ← ДОБАВЛЕНО
             CreatedAt = DateTime.UtcNow,
             UpdatedAt = DateTime.UtcNow
         };
-
 
         if (string.IsNullOrWhiteSpace(mod.Title))
         {
@@ -286,10 +275,8 @@ public class ModRepository(ApplicationContext context) : IRepository<ModDto, Cre
             throw new ArgumentException("At least one developer must be specified");
         }
         
-        
         context.Mods.Add(createdMod);
         await context.SaveChangesAsync();
-        
         
         return new ModDto()
         {
@@ -299,6 +286,7 @@ public class ModRepository(ApplicationContext context) : IRepository<ModDto, Cre
             IsClientside = createdMod.IsClientside,
             Downloads = createdMod.Downloads,
             Size = createdMod.Size,
+            ImageUrl = createdMod.ImageUrl, // ← ДОБАВЛЕНО
             Versions = createdMod.Versions.Select(v => new ModVersionDto()
             {
                 Id = v.Id,
@@ -332,7 +320,6 @@ public class ModRepository(ApplicationContext context) : IRepository<ModDto, Cre
         };
     }
 
-
     public async Task<ModDto> Update(UpdateModDto mod)
     {
         Mod? updatedMod = await context.Mods
@@ -342,32 +329,26 @@ public class ModRepository(ApplicationContext context) : IRepository<ModDto, Cre
             .Include(m => m.Developers)
             .FirstOrDefaultAsync(m => m.Id == mod.Id);
 
-
         if (updatedMod == null)
         {
             throw new KeyNotFoundException($"Mod with id {mod.Id} not found");
         }
         
-        
         var versions = await context.ModVersions
             .Where(v => mod.VersionIds.Contains(v.Id))
             .ToListAsync();
-        
         
         var loaders = await context.ModLoaders
             .Where(l => mod.ModLoaderIds.Contains(l.Id))
             .ToListAsync();
         
-        
         var tags = await context.Tags
             .Where(t => mod.TagIds.Contains(t.Id))
             .ToListAsync();
         
-        
         var developers = await context.Developers
             .Where(d => mod.DeveloperIds.Contains(d.Id))
             .ToListAsync();
-        
         
         updatedMod.Title = mod.Title;
         updatedMod.Description = mod.Description;
@@ -378,8 +359,8 @@ public class ModRepository(ApplicationContext context) : IRepository<ModDto, Cre
         updatedMod.IsClientside = mod.IsClientside;
         updatedMod.Downloads = mod.Downloads;
         updatedMod.Size = mod.Size;
+        updatedMod.ImageUrl = mod.ImageUrl; // ← ДОБАВЛЕНО
         updatedMod.UpdatedAt = DateTime.UtcNow;
-        
         
         if (string.IsNullOrWhiteSpace(mod.Title))
         {
@@ -411,10 +392,8 @@ public class ModRepository(ApplicationContext context) : IRepository<ModDto, Cre
             throw new ArgumentException("At least one developer must be specified");
         }
         
-        
         context.Mods.Update(updatedMod);
         await context.SaveChangesAsync();
-        
         
         updatedMod = await context.Mods
             .Include(m => m.Versions)
@@ -422,7 +401,6 @@ public class ModRepository(ApplicationContext context) : IRepository<ModDto, Cre
             .Include(m => m.Tags)
             .Include(m => m.Developers)
             .FirstOrDefaultAsync(m => m.Id == mod.Id);
-
 
         return new ModDto()
         {
@@ -432,6 +410,7 @@ public class ModRepository(ApplicationContext context) : IRepository<ModDto, Cre
             IsClientside = updatedMod.IsClientside,
             Downloads = updatedMod.Downloads,
             Size = updatedMod.Size,
+            ImageUrl = updatedMod.ImageUrl, // ← ДОБАВЛЕНО
             Versions = updatedMod.Versions.Select(v => new ModVersionDto()
             {
                 Id = v.Id,
@@ -464,7 +443,6 @@ public class ModRepository(ApplicationContext context) : IRepository<ModDto, Cre
             UpdatedAt = updatedMod.UpdatedAt
         };
     }
-
 
     public async Task Delete(Guid id)
     {

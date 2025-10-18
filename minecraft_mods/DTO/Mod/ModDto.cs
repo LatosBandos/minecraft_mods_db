@@ -13,6 +13,7 @@ public class ModDto
     public bool IsClientside { get; set; }
     public int Downloads { get; set; }
     public double Size { get; set; }
+    public string ImageUrl { get; set; } = ""; // для картинок
     public List<ModVersionDto> Versions { get; set; } = new();
     public List<ModLoaderDto> ModLoaders { get; set; } = new();
     public List<TagDto> Tags { get; set; } = new();

@@ -1,0 +1,182 @@
+/* ===== УТИЛИТЫ ===== */
+
+/* Цвета текста */
+.text-success { color: var(--success-color); }
+.text-warning { color: var(--warning-color); }
+.text-danger { color: var(--danger-color); }
+.text-info { color: var(--primary-color); }
+
+/* Состояния кнопок */
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn:disabled:hover {
+    transform: none;
+}
+
+/* Утилиты отображения */
+.hidden { display: none !important; }
+
+/* Теги и бейджи */
+.tag {
+    display: inline-block;
+    background: rgba(79, 195, 247, 0.2);
+    color: var(--primary-color);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: 12px;
+    font-size: 0.8rem;
+    margin: 0.1rem;
+}
+
+.badge {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    font-size: 0.8rem;
+}
+
+/* Формы и валидация */
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.form-group input {
+    width: 100%;
+    padding: var(--spacing-md);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+.field-error {
+    color: var(--danger-color);
+    font-size: 0.8rem;
+    margin-top: var(--spacing-xs);
+    display: none;
+}
+
+.form-group input.error {
+    border-color: var(--danger-color);
+    background: rgba(244, 67, 54, 0.1);
+}
+
+.form-group input.valid {
+    border-color: var(--success-color);
+}
+
+/* Чекбокс группа */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) 0;
+    margin-bottom: var(--spacing-md);
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+    transform: scale(1.2);
+}
+
+.checkbox-group label {
+    margin: 0;
+    color: var(--text-primary);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Подсказки для пароля */
+.password-hints {
+    background: var(--bg-primary);
+    border-radius: var(--border-radius-sm);
+    padding: var(--spacing-sm);
+    margin-top: var(--spacing-xs);
+    font-size: 0.8rem;
+}
+
+.password-hint-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacing-xs);
+    color: var(--text-muted);
+}
+
+.password-hint-item.valid {
+    color: var(--success-color);
+}
+
+.password-hint-item.invalid {
+    color: var(--text-muted);
+}
+
+.hint-icon {
+    margin-right: var(--spacing-xs);
+    font-size: 0.7rem;
+}
+
+.password-hint {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: var(--spacing-sm);
+    line-height: 1.4;
+}
+
+/* Множественный выбор */
+.multi-select-container {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.multi-select-item {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-sm);
+    margin: var(--spacing-xs) 0;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.multi-select-item:hover {
+    background: var(--bg-hover);
+}
+
+.multi-select-item input[type="checkbox"] {
+    margin-right: var(--spacing-sm);
+    width: 16px;
+    height: 16px;
+}
+
+.multi-select-label {
+    color: var(--text-primary);
+    font-size: 0.9rem;
+}
+
+/* Стили для скроллбара */
+.multi-select-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.multi-select-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}
+
+.multi-select-container::-webkit-scrollbar-thumb {
+    background: rgba(79, 195, 247, 0.5);
+    border-radius: 3px;
+}
+
+.multi-select-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(79, 195, 247, 0.7);
+}

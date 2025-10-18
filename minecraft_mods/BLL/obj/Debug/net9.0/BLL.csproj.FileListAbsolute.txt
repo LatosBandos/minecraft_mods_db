@@ -140,3 +140,39 @@ C:\Users\kapi\Desktop\sosalNew\minecraft_mods_db\minecraft_mods\BLL\obj\Debug\ne
 C:\Users\kapi\Desktop\sosalNew\minecraft_mods_db\minecraft_mods\BLL\obj\Debug\net9.0\refint\BLL.dll
 C:\Users\kapi\Desktop\sosalNew\minecraft_mods_db\minecraft_mods\BLL\obj\Debug\net9.0\BLL.pdb
 C:\Users\kapi\Desktop\sosalNew\minecraft_mods_db\minecraft_mods\BLL\obj\Debug\net9.0\ref\BLL.dll
+C:\Users\kapi\Desktop\учеба\работы\ооп\актуалочка\minecraft_mods_db\minecraft_mods\BLL\bin\Debug\net9.0\BLL.deps.json
+C:\Users\kapi\Desktop\учеба\работы\ооп\актуалочка\minecraft_mods_db\minecraft_mods\BLL\bin\Debug\net9.0\BLL.dll
+C:\Users\kapi\Desktop\учеба\работы\ооп\актуалочка\minecraft_mods_db\minecraft_mods\BLL\bin\Debug\net9.0\BLL.pdb
+C:\Users\kapi\Desktop\учеба\работы\ооп\актуалочка\minecraft_mods_db\minecraft_mods\BLL\bin\Debug\net9.0\DAL.dll
+C:\Users\kapi\Desktop\учеба\работы\ооп\актуалочка\minecraft_mods_db\minecraft_mods\BLL\bin\Debug\net9.0\DTO.dll
+C:\Users\kapi\Desktop\учеба\работы\ооп\актуалочка\minecraft_mods_db\minecraft_mods\BLL\bin\Debug\net9.0\DAL.pdb
+C:\Users\kapi\Desktop\учеба\работы\ооп\актуалочка\minecraft_mods_db\minecraft_mods\BLL\bin\Debug\net9.0\DTO.pdb
+C:\Users\kapi\Desktop\учеба\работы\ооп\актуалочка\minecraft_mods_db\minecraft_mods\BLL\obj\Debug\net9.0\BLL.csproj.AssemblyReference.cache
+C:\Users\kapi\Desktop\учеба\работы\ооп\актуалочка\minecraft_mods_db\minecraft_mods\BLL\obj\Debug\net9.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kapi\Desktop\учеба\работы\ооп\актуалочка\minecraft_mods_db\minecraft_mods\BLL\obj\Debug\net9.0\BLL.AssemblyInfoInputs.cache
+C:\Users\kapi\Desktop\учеба\работы\ооп\актуалочка\minecraft_mods_db\minecraft_mods\BLL\obj\Debug\net9.0\BLL.AssemblyInfo.cs
+C:\Users\kapi\Desktop\учеба\работы\ооп\актуалочка\minecraft_mods_db\minecraft_mods\BLL\obj\Debug\net9.0\BLL.csproj.CoreCompileInputs.cache
+C:\Users\kapi\Desktop\учеба\работы\ооп\актуалочка\minecraft_mods_db\minecraft_mods\BLL\obj\Debug\net9.0\BLL.sourcelink.json
+C:\Users\kapi\Desktop\учеба\работы\ооп\актуалочка\minecraft_mods_db\minecraft_mods\BLL\obj\Debug\net9.0\BLL.csproj.Up2Date
+C:\Users\kapi\Desktop\учеба\работы\ооп\актуалочка\minecraft_mods_db\minecraft_mods\BLL\obj\Debug\net9.0\BLL.dll
+C:\Users\kapi\Desktop\учеба\работы\ооп\актуалочка\minecraft_mods_db\minecraft_mods\BLL\obj\Debug\net9.0\refint\BLL.dll
+C:\Users\kapi\Desktop\учеба\работы\ооп\актуалочка\minecraft_mods_db\minecraft_mods\BLL\obj\Debug\net9.0\BLL.pdb
+C:\Users\kapi\Desktop\учеба\работы\ооп\актуалочка\minecraft_mods_db\minecraft_mods\BLL\obj\Debug\net9.0\ref\BLL.dll
+C:\Users\kapi\Desktop\учеба\работы\javascript\3 лаба\minecraft_mods_db\minecraft_mods\BLL\bin\Debug\net9.0\BLL.deps.json
+C:\Users\kapi\Desktop\учеба\работы\javascript\3 лаба\minecraft_mods_db\minecraft_mods\BLL\bin\Debug\net9.0\BLL.dll
+C:\Users\kapi\Desktop\учеба\работы\javascript\3 лаба\minecraft_mods_db\minecraft_mods\BLL\bin\Debug\net9.0\BLL.pdb
+C:\Users\kapi\Desktop\учеба\работы\javascript\3 лаба\minecraft_mods_db\minecraft_mods\BLL\bin\Debug\net9.0\DAL.dll
+C:\Users\kapi\Desktop\учеба\работы\javascript\3 лаба\minecraft_mods_db\minecraft_mods\BLL\bin\Debug\net9.0\DTO.dll
+C:\Users\kapi\Desktop\учеба\работы\javascript\3 лаба\minecraft_mods_db\minecraft_mods\BLL\bin\Debug\net9.0\DAL.pdb
+C:\Users\kapi\Desktop\учеба\работы\javascript\3 лаба\minecraft_mods_db\minecraft_mods\BLL\bin\Debug\net9.0\DTO.pdb
+C:\Users\kapi\Desktop\учеба\работы\javascript\3 лаба\minecraft_mods_db\minecraft_mods\BLL\obj\Debug\net9.0\BLL.csproj.AssemblyReference.cache
+C:\Users\kapi\Desktop\учеба\работы\javascript\3 лаба\minecraft_mods_db\minecraft_mods\BLL\obj\Debug\net9.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kapi\Desktop\учеба\работы\javascript\3 лаба\minecraft_mods_db\minecraft_mods\BLL\obj\Debug\net9.0\BLL.AssemblyInfoInputs.cache
+C:\Users\kapi\Desktop\учеба\работы\javascript\3 лаба\minecraft_mods_db\minecraft_mods\BLL\obj\Debug\net9.0\BLL.AssemblyInfo.cs
+C:\Users\kapi\Desktop\учеба\работы\javascript\3 лаба\minecraft_mods_db\minecraft_mods\BLL\obj\Debug\net9.0\BLL.csproj.CoreCompileInputs.cache
+C:\Users\kapi\Desktop\учеба\работы\javascript\3 лаба\minecraft_mods_db\minecraft_mods\BLL\obj\Debug\net9.0\BLL.sourcelink.json
+C:\Users\kapi\Desktop\учеба\работы\javascript\3 лаба\minecraft_mods_db\minecraft_mods\BLL\obj\Debug\net9.0\BLL.csproj.Up2Date
+C:\Users\kapi\Desktop\учеба\работы\javascript\3 лаба\minecraft_mods_db\minecraft_mods\BLL\obj\Debug\net9.0\BLL.dll
+C:\Users\kapi\Desktop\учеба\работы\javascript\3 лаба\minecraft_mods_db\minecraft_mods\BLL\obj\Debug\net9.0\refint\BLL.dll
+C:\Users\kapi\Desktop\учеба\работы\javascript\3 лаба\minecraft_mods_db\minecraft_mods\BLL\obj\Debug\net9.0\BLL.pdb
+C:\Users\kapi\Desktop\учеба\работы\javascript\3 лаба\minecraft_mods_db\minecraft_mods\BLL\obj\Debug\net9.0\ref\BLL.dll

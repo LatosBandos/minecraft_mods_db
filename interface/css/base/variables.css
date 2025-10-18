@@ -1,0 +1,52 @@
+/* ===== ПЕРЕМЕННЫЕ ===== */
+:root {
+
+     /* Основной градиент фона */
+    --bg-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    
+    /* Цвета */
+    --primary-color: #4fc3f7;
+    --primary-hover: #29b6f6;
+    --success-color: #66bb6a;
+    --success-hover: #4caf50;
+    --warning-color: #ffa726;
+    --warning-hover: #ff9800;
+    --danger-color: #f44336;
+    --danger-hover: #d32f2f;
+    --secondary-color: #666;
+    --secondary-hover: #777;
+    
+    /* Фоны */
+    --bg-primary: rgba(255, 255, 255, 0.05);
+    --bg-secondary: rgba(255, 255, 255, 0.1);
+    --bg-dark: rgba(0, 0, 0, 0.3);
+    --bg-hover: rgba(255, 255, 255, 0.08);
+    
+    /* Текст */
+    --text-primary: #e2e2e2;
+    --text-secondary: #a0a0a0;
+    --text-muted: #888;
+    
+    /* Границы */
+    --border-color: rgba(255, 255, 255, 0.1);
+    --border-light: rgba(255, 255, 255, 0.2);
+    
+    /* Тени */
+    --shadow-light: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.3);
+    --shadow-heavy: 0 10px 30px rgba(0, 0, 0, 0.3);
+    
+    /* Размеры */
+    --border-radius: 8px;
+    --border-radius-sm: 4px;
+    --border-radius-lg: 12px;
+    --border-radius-xl: 16px;
+    
+    /* Отступы */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+}
+

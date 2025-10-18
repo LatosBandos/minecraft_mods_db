@@ -9,13 +9,13 @@ public class Mod : BaseEntity
     public bool IsClientside { get; set; }
     public int Downloads { get; set; }
     public double Size { get; set; }
+    public string ImageUrl { get; set; } = ""; // 🔥 ДОБАВЛЯЕМ ЭТУ СТРОЧКУ
     public List<ModVersion> Versions { get; set; } = new();
     public List<ModLoader> ModLoaders { get; set; } = new();
     public List<Tag> Tags { get; set; } = new();
     public List<Developer> Developers { get; set; } = new();
     public List<Collection> Collections { get; set; } = new();
 }
-
 
 public class ModMap
 {
@@ -27,22 +27,19 @@ public class ModMap
         builder.Property(x => x.IsClientside).IsRequired();
         builder.Property(x => x.Downloads).IsRequired();
         builder.Property(x => x.Size).IsRequired();
-        
+        builder.Property(x => x.ImageUrl).IsRequired(false); // 🔥 ДОБАВЛЯЕМ ЭТУ СТРОЧКУ
         
         builder
             .HasMany(m => m.Versions)
             .WithMany(v => v.Mods);
         
-        
         builder
             .HasMany(m => m.ModLoaders)
             .WithMany(l => l.Mods);
         
-        
         builder
             .HasMany(m => m.Tags)
             .WithMany(t => t.Mods);
-        
         
         builder
             .HasMany(m => m.Developers)

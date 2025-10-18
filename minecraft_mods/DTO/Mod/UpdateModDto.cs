@@ -8,6 +8,7 @@ public class UpdateModDto
     public bool IsClientside { get; set; }
     public int Downloads { get; set; }
     public double Size { get; set; }
+    public string ImageUrl { get; set; } = ""; // картиначка
     public List<Guid> VersionIds { get; set; } = new();
     public List<Guid> ModLoaderIds { get; set; } = new();
     public List<Guid> TagIds { get; set; } = new();

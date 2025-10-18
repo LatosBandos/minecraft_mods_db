@@ -1,0 +1,23 @@
+/* Главный файл импорта стилей */
+
+/* Базовые стили */
+@import url('base/reset.css');
+@import url('base/variables.css');
+@import url('base/typography.css');
+
+/* Компоненты */
+@import url('components/layout.css');
+@import url('components/header.css');
+@import url('components/auth.css');
+@import url('components/cards.css');
+@import url('components/tables.css');
+@import url('components/modals.css');
+@import url('components/sidebar.css');
+@import url('components/buttons.css');
+
+/* Утилиты */
+@import url('utils/animations.css');
+@import url('utils/utilities.css');
+
+/* Адаптивность */
+@import url('responsive.css');
